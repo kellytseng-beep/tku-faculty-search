@@ -278,7 +278,7 @@ def render_card(t):
                              + [" ".join((p.get("title","") or "").split()) for p in pubs]).lower()
     rank_order = RANK_ORDER.get(rank, 9)
 
-    # Selection checkbox — top-right corner of card
+    # Selection checkbox — top-right corner of card (large, prominent)
     has_email = bool(email)
     corner_checkbox_html = (
         f'<label class="absolute top-2 right-2 z-10 cursor-pointer p-1.5 rounded hover:bg-slate-100 select-none" '
@@ -287,6 +287,14 @@ def render_card(t):
         f'data-email="{esc(email)}" data-name="{esc(name)}" '
         f'onclick="event.stopPropagation(); toggleSel(this)">'
         f'</label>'
+    ) if has_email else ''
+
+    # Same checkbox also next to email at bottom (for users who associate selection with the email line).
+    # Synced via the shared .mail-select handler.
+    bottom_checkbox_html = (
+        f'<input type="checkbox" class="mail-select w-4 h-4 accent-blue-600 cursor-pointer shrink-0" '
+        f'data-email="{esc(email)}" data-name="{esc(name)}" '
+        f'onclick="event.stopPropagation(); toggleSel(this)" title="勾選以寄信／匯出">'
     ) if has_email else ''
 
     return (
@@ -344,7 +352,7 @@ def render_card(t):
         + tpr_html
 
         + f'<div class="flex items-center justify-between gap-2 pt-1 border-t border-slate-50">'
-        f'<div class="min-w-0 flex-1">{email_html}</div>'
+        f'<div class="flex items-center gap-2 min-w-0 flex-1">{bottom_checkbox_html}{email_html}</div>'
         f'{profile_html}'
         f'</div>'
 
@@ -406,6 +414,10 @@ function toggleSel(cb) {
   if (!email) return;
   if (cb.checked) selectedEmails[email] = {name: name, dept: CURRENT_DEPT};
   else delete selectedEmails[email];
+  // Sync the OTHER checkbox(es) on the same card (top-right + bottom)
+  document.querySelectorAll('.mail-select[data-email="' + email.replace(/"/g, '\\"') + '"]').forEach(function(other) {
+    if (other !== cb) other.checked = cb.checked;
+  });
   saveSel();
   updateMailBar();
 }
