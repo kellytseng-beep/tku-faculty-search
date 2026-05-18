@@ -1,0 +1,1100 @@
+[
+  {
+    "name": "蔡振興",
+    "nameEn": "TSAI CHEN-HSING",
+    "rank": "教授",
+    "uid": "t711706",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "rnchtsai@mail.tku.edu.tw",
+    "courses": []
+  },
+  {
+    "name": "林怡弟",
+    "nameEn": "LIN YI-TI",
+    "rank": "教授",
+    "uid": "t991312",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "ytlin@mail.tku.edu.tw",
+    "courses": []
+  },
+  {
+    "name": "陳佩筠",
+    "nameEn": "PEI-YUN CHEN",
+    "rank": "教授",
+    "uid": "t987227",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "jill@mail.tku.edu.tw",
+    "courses": [
+      "英文翻譯 T  704",
+      "進修英文"
+    ]
+  },
+  {
+    "name": "曾郁景",
+    "nameEn": "YU-CHING TSENG",
+    "rank": "教授",
+    "uid": "t986267",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "ychtseng@mail.tku.edu.tw",
+    "courses": [
+      "進修英文"
+    ]
+  },
+  {
+    "name": "羅艾琳",
+    "nameEn": "IRIS RALPH",
+    "rank": "教授",
+    "uid": "t985505",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "irisralph@mail.tku.edu.tw",
+    "courses": []
+  },
+  {
+    "name": "小澤自然",
+    "nameEn": "SHIZEN OZAWA",
+    "rank": "教授",
+    "uid": "t968359",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "143561@mail.tku.edu.tw",
+    "courses": []
+  },
+  {
+    "name": "吳怡芬",
+    "nameEn": "I-FEN WU",
+    "rank": "副教授",
+    "uid": "t992807",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "iwu@mail.tku.edu.tw",
+    "courses": [
+      "文學作品讀法 L  306"
+    ]
+  },
+  {
+    "name": "涂銘宏",
+    "nameEn": "MING HUNG TU",
+    "rank": "副教授",
+    "uid": "t906169",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "alextu@mail.tku.edu.tw",
+    "courses": []
+  },
+  {
+    "name": "張慈珊",
+    "nameEn": "TZU-SHAN CHANG",
+    "rank": "副教授",
+    "uid": "t903772",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "",
+    "courses": [
+      "英文（一） T  401",
+      "英語演講 L  417"
+    ]
+  },
+  {
+    "name": "張雅慧",
+    "nameEn": "YEA HUEY CHANG",
+    "rank": "副教授",
+    "uid": "t905663",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "",
+    "courses": []
+  },
+  {
+    "name": "齊嵩齡",
+    "nameEn": "CHYI SONG-LING",
+    "rank": "副教授",
+    "uid": "t901102",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "yslc7@mail.tku.edu.tw",
+    "courses": []
+  },
+  {
+    "name": "蔡瑞敏",
+    "nameEn": "JUI-MIN TSAI",
+    "rank": "副教授",
+    "uid": "t980327",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "jmtsai@mail.tku.edu.tw",
+    "courses": [
+      "企業實習 T  604",
+      "英語教學導論 Q  202"
+    ]
+  },
+  {
+    "name": "錢欽昭",
+    "nameEn": "CHIN-JAU CHYAN",
+    "rank": "副教授",
+    "uid": "t986717",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "cjchyan@mail.tku.edu.tw",
+    "courses": []
+  },
+  {
+    "name": "薛玉政",
+    "nameEn": "SIEH YU-CHENG",
+    "rank": "副教授",
+    "uid": "t986722",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "",
+    "courses": []
+  },
+  {
+    "name": "鄧秋蓉",
+    "nameEn": "DENG CHIOU-RUNG",
+    "rank": "副教授",
+    "uid": "t981147",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "138870@mail.tku.edu.tw",
+    "courses": [
+      "英語口語表達 T  308"
+    ]
+  },
+  {
+    "name": "郭家珍",
+    "nameEn": "KUO CHIA-CHEN",
+    "rank": "副教授",
+    "uid": "t969421",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "141798@mail.tku.edu.tw",
+    "courses": [
+      "英語會話 T  308",
+      "英文翻譯 T  605",
+      "生態與電影 B  701"
+    ]
+  },
+  {
+    "name": "李佳盈",
+    "nameEn": "JIA-YING LEE",
+    "rank": "副教授",
+    "uid": "t960216",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "142984@mail.tku.edu.tw",
+    "courses": []
+  },
+  {
+    "name": "林銘輝",
+    "nameEn": "LIN MING HUEI",
+    "rank": "副教授",
+    "uid": "t966407",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "144720@mail.tku.edu.tw",
+    "courses": [
+      "進階學術英文寫作 T  607",
+      "英作文（一） T  605"
+    ]
+  },
+  {
+    "name": "張介英",
+    "nameEn": "CHANG CHIEH-YING",
+    "rank": "副教授",
+    "uid": "t932481",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "",
+    "courses": [
+      "ＡＩ輔助口譯入門 T  605",
+      "英作文（一） L  303"
+    ]
+  },
+  {
+    "name": "劉佩勳",
+    "nameEn": "LIU PEI-HSUN",
+    "rank": "副教授",
+    "uid": "t953096",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "",
+    "courses": []
+  },
+  {
+    "name": "王慧娟",
+    "nameEn": "HUI-CHUAN WANG",
+    "rank": "約聘副教授",
+    "uid": "t992887",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "hcwang@mail.tku.edu.tw",
+    "courses": [
+      "英文（一） E  401"
+    ]
+  },
+  {
+    "name": "吳瑜雲",
+    "nameEn": "WU YU-YUN",
+    "rank": "助理教授",
+    "uid": "t741301",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "yuyun@mail.tku.edu.tw",
+    "courses": [
+      "英作文（二） T  703"
+    ]
+  },
+  {
+    "name": "包俊傑",
+    "nameEn": "BROWN IAIN KELSALL",
+    "rank": "助理教授",
+    "uid": "t988958",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "133163@mail.tku.edu.tw",
+    "courses": [
+      "英國文學 B  425",
+      "閱讀私探小說 B  602"
+    ]
+  },
+  {
+    "name": "王蔚婷",
+    "nameEn": "GUTIERREZ JANNETTE WANG",
+    "rank": "助理教授",
+    "uid": "t988809",
+    "rs_no": null,
+    "nsc_email": "",
+    "publications": [],
+    "email": "",
+    "courses": []
+  },
+  {
+    "name": "莊晏甄",
+    "nameEn": "YEN-CHEN CHUANG",
+    "rank": "助理教授",
+    "uid": "t981657",
+    "rs_no": "84419f819de240f59d6305b4f0e72cc2",
+    "nsc_email": "",
+    "publications": [
+      {
+        "authors": "Yen-Chen Chuang",
+        "category": "研討會論文",
+        "date": "2019-",
+        "source": "",
+        "title": "Animal, All too Animal: Incest as Instincts and Violence within Institutions"
+      },
+      {
+        "authors": "莊晏甄",
+        "category": "研討會論文",
+        "date": "2016-07",
+        "source": "",
+        "title": "Dr. Deleuze's Love Machine, Wong Kar-Wai in King Arthur’s Court"
+      },
+      {
+        "authors": "Yen-Chen Chuang",
+        "category": "專書論文",
+        "date": "2010-07",
+        "source": "",
+        "title": "Gravity’s Rainbow: the Baroque Folds and Conatus Sese Conservandi in Tarsem Singh’s The Fall"
+      },
+      {
+        "authors": "Yen-Chen Chuang",
+        "category": "期刊論文",
+        "date": "2010-01",
+        "source": "Hypermedia Joyce Studies",
+        "title": "DERRIDA AVEC JOYCE: THE PRINCIPLE OF EATING THE OTHER IN ULYSSES"
+      }
+    ],
+    "email": "138460@mail.tku.edu.tw",
+    "courses": [
+      "英作文（一） L  305"
+    ]
+  },
+  {
+    "name": "雷凱",
+    "nameEn": "GUY MATTHEW REDMER",
+    "rank": "助理教授",
+    "uid": "t969963",
+    "rs_no": "462c12533d5946e9b16fed97e86c1d9e",
+    "nsc_email": "",
+    "publications": [
+      {
+        "authors": "Guy Redmer",
+        "category": "期刊論文",
+        "date": "2025-06",
+        "source": "The Journal of Language Teaching and Learning",
+        "title": "The Road Not Taken: Second Language Learners' Strategy Aspirations"
+      },
+      {
+        "authors": "Guy Redmer",
+        "category": "期刊論文",
+        "date": "2024-10",
+        "source": "International Journal of Literature Studies",
+        "title": "Longing for a Home and the Role of Women in Louis L'Amour's Narratives"
+      },
+      {
+        "authors": "Guy Redmer",
+        "category": "期刊論文",
+        "date": "2022-12",
+        "source": "Journal of Language and Cultural Education",
+        "title": "The Desire for a Home: Individualism in Louis L'Amour's Dark Canyon"
+      },
+      {
+        "authors": "Guy Redmer",
+        "category": "期刊論文",
+        "date": "2022-03",
+        "source": "Studies in Self-Access Learning Journal",
+        "title": "Self-regulation in an advanced language learner: A case study of language learning strategies"
+      },
+      {
+        "authors": "Guy Redmer",
+        "category": "期刊論文",
+        "date": "2021-05",
+        "source": "Indonesian Journal of English Language Teaching",
+        "title": "After class: Students’ social use of English as a lingua franca (ELF)"
+      }
+    ],
+    "email": "141145@mail.tku.edu.tw",
+    "courses": []
+  },
+  {
+    "name": "吳凱書",
+    "nameEn": "WU KAI-SU",
+    "rank": "助理教授",
+    "uid": "t939455",
+    "rs_no": "67244a31d61a42aca81de3ea48f70aa0",
+    "nsc_email": "",
+    "publications": [
+      {
+        "authors": "吳凱書",
+        "category": "期刊論文",
+        "date": "2025-12",
+        "source": "淡江外語論叢",
+        "title": "重繪旅程：論 V. S. 奈波爾《抵達之謎》中的敘事與徵候"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "研討會論文",
+        "date": "2025-07",
+        "source": "",
+        "title": "The Vietnamese-American Body in Motion: Diasporic Identity and Embodiment in Ocean Vuong’s On Earth We’re Briefly Gorgeous"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "期刊論文",
+        "date": "2025-06",
+        "source": "The Wenshan Review of Literature and Culture",
+        "title": "Narrating a Nation into Being: On Michael Ondaatje's\r\nDeviant Narrative Strategy in Running in the Family"
+      },
+      {
+        "authors": "吳凱書",
+        "category": "研討會論文",
+        "date": "2025-01",
+        "source": "",
+        "title": "跨時空的憂鬱與相依：《時光的彼岸》中的日記書寫與脆弱性倫理"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "研討會論文",
+        "date": "2022-11",
+        "source": "",
+        "title": "Narrating a Nation into Being: On Michael Ondaatje’s Deviant Narrative Strategy in Running in the Family"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "期刊論文",
+        "date": "2022-06",
+        "source": "Tamkang Review",
+        "title": "Parallactic History: On Peter Carey's Lies, Writing Back and Archivation in Illywhacker, Jack Maggs, and True History of the Kelly Gang"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "期刊論文",
+        "date": "2020-03",
+        "source": "Concentric: Literary and Cultural Studies",
+        "title": "Love, War, and the Other in Emmanuel Levinas, Jacques Derrida, and Michael Ondaatje: The English Patient as the Dialogic Field"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "期刊論文",
+        "date": "2018-10",
+        "source": "Philosophy Study",
+        "title": "Intertextuality Revisited: Reflections on Subject in Process, Textual Analysis and Reading/Writing Behavior in Cyberspace"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "研討會論文",
+        "date": "2018-04",
+        "source": "",
+        "title": "Beyond Anthropocentrism: Wu Ming-yi’s Apocalyptic Imagination in The Man with the Compound Eyes"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "期刊論文",
+        "date": "2017-09",
+        "source": "Journal of Literature and Art Studies",
+        "title": "In Search of Identity in Language and Irish Geography: On Seamus Heaney’s Wintering Out"
+      },
+      {
+        "authors": "吳凱書",
+        "category": "期刊論文",
+        "date": "2017-06",
+        "source": "英美文學評論",
+        "title": "過往的幽靈：翁達傑《身著獅皮》與《分離》裡的記憶製圖以及解域社群"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "研討會論文",
+        "date": "2017-05",
+        "source": "",
+        "title": "Parallactic History: On Peter Carey’s Narrative Devices of \r\n“Lies,” “Writing Back” and “Archivation” in Illywhacker, Jack Maggs, and True History of the Kelly Gang"
+      },
+      {
+        "authors": "吳凱書",
+        "category": "研討會論文",
+        "date": "2016-10",
+        "source": "",
+        "title": "過往的幽靈：翁達傑《身著獅皮》與《分離》裡的記憶製圖以及解域社群"
+      },
+      {
+        "authors": "吳凱書",
+        "category": "期刊論文",
+        "date": "2016-06",
+        "source": "中外文學",
+        "title": "柯慈《慢人》裡的失能主體、移民歸屬感與小說增補空間"
+      },
+      {
+        "authors": "吳凱書",
+        "category": "研討會論文",
+        "date": "2015-05",
+        "source": "",
+        "title": "柯慈《慢人》裡的失能主體及其移民歸屬感"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "專書",
+        "date": "2015-02",
+        "source": "",
+        "title": "Writing Survival: Death, Debt and Self in the Works of V. S. Naipaul, Derek Walcott and J. M. Coetzee"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "期刊論文",
+        "date": "2014-03",
+        "source": "EurAmerica",
+        "title": "Ethics of Writing — From Autobiography to Hetero-Thanato-Biography; A Reading of Derrida’s Circumfession"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "研討會論文",
+        "date": "2014-03",
+        "source": "",
+        "title": "The Life of Sea Change in Derek Walcott’s Another Life"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "期刊論文",
+        "date": "2013-06",
+        "source": "Tamkang Review",
+        "title": "Decomposing the Authoritative Author: Truth and Confession in J. M. Coetzee’s Foe and Summertime"
+      },
+      {
+        "authors": "吳凱書（Kaishu Wu）",
+        "category": "期刊論文",
+        "date": "2012-06",
+        "source": "NTU Studies in Language and Literature",
+        "title": "Writing Identities: Home and Inheritance in V. S. Naipaul's (Auto-)Biographical Strategy in A House for Mr. Biswas and Derek Walcott's Inter-Generational Memory in Omeros"
+      },
+      {
+        "authors": "吳凱書",
+        "category": "專書論文",
+        "date": "2010-",
+        "source": "離散與文化疆界",
+        "title": "縈繞的歷史意識與身份認同的政治 — 以德希達閱讀崔維新的《玉牡丹》"
+      },
+      {
+        "authors": "吳凱書（Curtis Wu）",
+        "category": "研討會論文",
+        "date": "2008-06",
+        "source": "",
+        "title": "Quest for Unreachable Home – A Lacanian Reading of Subjectivity and Desire in The Home Song Stories"
+      },
+      {
+        "authors": "Kai-su Wu",
+        "category": "研討會論文",
+        "date": "2008-06",
+        "source": "",
+        "title": "Quest for Unreachable Home — A Lacanian Reading of Subjectivity and Desire in The Home Song Stories"
+      }
+    ],
+    "email": "151766@mail.tku.edu.tw",
+    "courses": []
+  },
+  {
+    "name": "熊婷惠",
+    "nameEn": "HSIUNG TING-HUI",
+    "rank": "助理教授",
+    "uid": "t936737",
+    "rs_no": "f08c27d0af934634bfb751c00a03afb0",
+    "nsc_email": "154050@mail.tku.edu.tw",
+    "publications": [
+      {
+        "authors": "熊婷惠",
+        "category": "期刊論文",
+        "date": "2025-12",
+        "source": "《中國現代文學》",
+        "title": "〈後五一三的召靈書：賀淑芳《蜕》的記憶與言說〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2025-10",
+        "source": "",
+        "title": "〈戰爭與死亡：陳惠珊《寂靜風暴》裡的愛欲主體與戰爭敘事〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2025-09",
+        "source": "",
+        "title": "〈凝結的時間、流動的地方：林蘇真小說裡的非地點、歷史與身分塑造〉"
+      },
+      {
+        "authors": "Ting-hui Hsiung",
+        "category": "其他",
+        "date": "2025-06",
+        "source": "",
+        "title": "“Thinking from the Margins, Writing on the Forgotten: An Interview with Ho Sok Fong.” Tamkang Review 55.2 (June 2025): 77-97."
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "其他",
+        "date": "2025-06",
+        "source": "",
+        "title": "〈石人木馬少年游：讀李有成散文集《離開漁村以後》〉《關鍵評論網》2025年6月15日。"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2025-01",
+        "source": "",
+        "title": "〈大塚茱麗《泳客》裡的歷史記憶、失智與照護〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2024-07",
+        "source": "",
+        "title": "〈記憶的倫理：黎南(Nam Le)與金翠(Kim Thúy)的船民敘事〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2024-01",
+        "source": "",
+        "title": "〈後五一三的召靈術：賀淑芳《蛻》的倖存者、失憶與言說〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2023-03",
+        "source": "",
+        "title": "〈華馬文學中的中國性？：以《 倖存者，如我們》與《 碼頭上的陌生人》為例〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "其他",
+        "date": "2023-03",
+        "source": "",
+        "title": "〈那張臉、陌生人與倖存者〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "專書論文",
+        "date": "2022-10",
+        "source": "《馬華文學與文化讀本》",
+        "title": "〈當代華裔馬英小說家：歐大旭、陳團英與朱洋熹〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "專書論文",
+        "date": "2022-08",
+        "source": "《亞際南方：馬華文學與文化論集》",
+        "title": "〈「小說捕獲的只是剩餘」：賀淑芳的零碎敘事策略〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2022-06",
+        "source": "",
+        "title": "〈聆聽庶民的聲音：歐大旭《倖存者，如我們》的貧窮書寫〉。"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "專書論文",
+        "date": "2020-10",
+        "source": "《南方的社會，學》下冊",
+        "title": "〈馬來西亞華裔離散英文小說：來自南方的記憶書寫〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2020-10",
+        "source": "",
+        "title": "〈變譯的世界：論《湖面如鏡》英譯本〉"
+      },
+      {
+        "authors": "HSIUNG Ting-hui",
+        "category": "期刊論文",
+        "date": "2020-01",
+        "source": "《中山人文學報》Sun Yat-sen Journal of Humanities",
+        "title": "“Reifying Cultural Memory and Violence in Vyvyane Loh’s Breaking the Tongue”"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2019-10",
+        "source": "",
+        "title": "〈「小說捕獲的只是剩餘」：賀淑芳的破碎敘事策略〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "專書論文",
+        "date": "2019-05",
+        "source": "《跨文化與跨領域教學：理論、策略與實務》",
+        "title": "〈在語言與文化差異之間：以翻譯教學為例〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2019-04",
+        "source": "",
+        "title": "〈世界主義下的馬華文學：賀淑芳《迷宮毯子》中的種族問題〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2018-09",
+        "source": "",
+        "title": "〈來自南方的記憶書寫：馬來西亞離散英文小說的南方論述〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "期刊論文",
+        "date": "2018-08",
+        "source": "《文化研究》ROUTER:A journal of cultural studies",
+        "title": "[書評]〈唱自己的歌，聽自己的聲音：評許維賢《華語電影在後馬來西亞：土腔風格、華夷風與作者論》〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "專書論文",
+        "date": "2018-04",
+        "source": "《學於途而印於心：李有成教授七秩壽慶暨榮退文集》",
+        "title": "〈戰爭中的外邦人：論羅惠賢《斷語》與陳團英《雨之賜》中的他者問題〉"
+      },
+      {
+        "authors": "Ting-hui Hsiung",
+        "category": "期刊論文",
+        "date": "2017-12",
+        "source": "《文山評論》The Wenshan Review of Literature and Culture",
+        "title": "Absent Presence: The Absent Father and Postmemory in \r\nTash Aw's The Harmony Silk Factory"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "專書論文",
+        "date": "2017-12",
+        "source": "《生命敘事：自我表述、醫學敘事與文化記憶》",
+        "title": "〈《確然書》中的後記憶與創傷書寫〉"
+      },
+      {
+        "authors": "Ting-hui Hsiung",
+        "category": "研討會論文",
+        "date": "2017-04",
+        "source": "",
+        "title": "“English Language is the Problem: Two Asian Stories by Diasporic Asian American Novelists Amitav Ghosh and Vyvyane Loh”"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "期刊論文",
+        "date": "2016-12",
+        "source": "Review of English and American Literature英美文學評論",
+        "title": "[書評] 哀鳴變奏曲:評鄧敏靈(Madeleine Thien)著 《不要說我們一無所有》(Do Not Say We Have Nothing)"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2016-09",
+        "source": "",
+        "title": "〈《確然書》中的後記憶與創傷書寫〉"
+      },
+      {
+        "authors": "Ting-hui Hsiung",
+        "category": "研討會論文",
+        "date": "2016-06",
+        "source": "",
+        "title": "“Absent in Presence: The Absent Father in Tash Aw’s The Harmony Silk Factory”"
+      },
+      {
+        "authors": "Ting-hui HSIUNG",
+        "category": "期刊論文",
+        "date": "2016-04",
+        "source": "《台灣東南亞學刊》Taiwan Journal of Southeast Asian Studies",
+        "title": "Flow of Desires: Visual Pleasure in Royston Tan’s 4:30"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "期刊論文",
+        "date": "2015-12",
+        "source": "《文化研究》ROUTER:A journal of cultural studies",
+        "title": "〈笑問客從何處來：南臺灣與東南亞華人的方言情感〉"
+      },
+      {
+        "authors": "Ting-hui Hsiung",
+        "category": "研討會論文",
+        "date": "2015-12",
+        "source": "",
+        "title": "“Building a Japanese Garden: Remembering and Forgetting in Tan Twan Eng’s The Garden of Evening Mists”"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "期刊論文",
+        "date": "2015-07",
+        "source": "《中山人文學報》Sun Yat-sen Journal of Humanities",
+        "title": "華語(語系)電影？：以邱金海之《伴我行》思考華語語系邊界"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "期刊論文",
+        "date": "2014-06",
+        "source": "《臺大東亞文化研究》THE NTU JOURNAL OF EAST ASIAN CULTURE",
+        "title": "[Book Review] Tash Aw: Map of the Invisible World"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2013-09",
+        "source": "",
+        "title": "戰爭中的他者：羅惠賢《斷語》與陳團榮《雨之賜》中日據馬來亞時期再現"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2013-07",
+        "source": "",
+        "title": "〈華語（語系）電影？試以華語語系看邱金海之《伴我行》〉"
+      },
+      {
+        "authors": "Ting-hui Hsiung",
+        "category": "專書論文",
+        "date": "2013-",
+        "source": "Intersecting Identities and Interculturality: Discourse and Practice",
+        "title": "Identity Production in the Poetry of Shirley Geok-lin Lim"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2012-11",
+        "source": "",
+        "title": "〈羅惠賢《斷語》中的暴力奇觀〉"
+      },
+      {
+        "authors": "Ting-hui Hsiung",
+        "category": "研討會論文",
+        "date": "2012-06",
+        "source": "",
+        "title": "“Thinking of Silence and Body in Feminist Theories: Taking as Examples Marguerite Duras's The Lover and Doris Lessing's Briefing For a Descent Into Hell”"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2012-05",
+        "source": "",
+        "title": "“Walking Forwards?: Sense of Place in the Poetry of Shirley Geok-lin Lim and Marilyn Chin”"
+      },
+      {
+        "authors": "Ting-hui Hsiung",
+        "category": "研討會論文",
+        "date": "2012-05",
+        "source": "",
+        "title": "“Walking Forwards?: Sense of Place in the Poetry of Shirley Geok-lin Lim and Marilyn Chin.” ) . 25-26 May 2012."
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2012-05",
+        "source": "",
+        "title": "〈重啟/起歷史檔案：論《和諧絲莊》中的離散性、記憶與馬共書寫〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2012-04",
+        "source": "",
+        "title": "張貴興《群象》中的雨林象徵"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2010-12",
+        "source": "",
+        "title": "Identity Production in the Poetry of Shirley Geok-lin Lim"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "專書論文",
+        "date": "2010-",
+        "source": "《離散與文化疆界》",
+        "title": "〈離返之間：村上春樹《海邊的卡夫卡》中的國族認同〉"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2009-10",
+        "source": "",
+        "title": "跨界想像：邱金海《十二樓》中的空間意識"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2009-03",
+        "source": "",
+        "title": "偷窺的快感？：陳子謙《4:30》中看／不見的女人"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2008-06",
+        "source": "",
+        "title": "浮根生異地：羅卓瑤浮生中「根」的辯證"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2008-01",
+        "source": "",
+        "title": "A Text of Negotiation: National Identity in Haruki Murakami's Kafka on the Shore"
+      },
+      {
+        "authors": "熊婷惠",
+        "category": "研討會論文",
+        "date": "2006-10",
+        "source": "",
+        "title": "Challenging the Cultural Script: Play of Identities in Gish Jen’s Mona in the Promised Land"
+      }
+    ],
+    "email": "154050@mail.tku.edu.tw",
+    "courses": []
+  },
+  {
+    "name": "陳家倩",
+    "nameEn": "CHEN CHIA-CHIEN",
+    "rank": "助理教授",
+    "uid": "t931891",
+    "rs_no": "e8a8e0f45b4f4726aa1cbd6184745b4d",
+    "nsc_email": "",
+    "publications": [
+      {
+        "authors": "陳家倩",
+        "category": "技術報告",
+        "date": "2022-",
+        "source": "",
+        "title": "《冰雪奇緣》翻譯師教你Netflix和好萊塢大片接案竅門。PPA。https://www.pressplay.cc/project/F5212BF59DC868619279A30DAC88DD77/articles/62CF00B3AA32B46522F285A44974EEFB"
+      },
+      {
+        "authors": "陳家倩",
+        "category": "技術報告",
+        "date": "2020-",
+        "source": "",
+        "title": "字幕翻譯必修課：40部電影接案練習本。眾文。"
+      },
+      {
+        "authors": "陳家倩",
+        "category": "技術報告",
+        "date": "2019-",
+        "source": "",
+        "title": "我的職業是電影字幕翻譯師：一年翻50部電影的祕密課。眾文。"
+      }
+    ],
+    "email": "",
+    "courses": []
+  },
+  {
+    "name": "林嘉鴻",
+    "nameEn": "CHIA-HUNG LIN",
+    "rank": "助理教授",
+    "uid": "t953007",
+    "rs_no": "fb40f967e6414e058f6a698bf08f5f31",
+    "nsc_email": "",
+    "publications": [
+      {
+        "authors": "Chia-Hung Lin",
+        "category": "期刊論文",
+        "date": "2026-04",
+        "source": "The Journal of Applied English",
+        "title": "The Discourse of Clinical Authority in Bloodstream: Professional Voice, Diagnostic Uncertainty, and the Production of Dread"
+      },
+      {
+        "authors": "Max Chia-Hung Lin",
+        "category": "期刊論文",
+        "date": "2025-12",
+        "source": "Medical Humanities",
+        "title": "From Altar to Autopsy Table: Ecological Imaginaries, Medical Violence, and Para-Religious Affect in William Carlos Williams’s “The Use of Force” and Tess Gerritsen’s The Surgeon"
+      },
+      {
+        "authors": "呂虹瑾,林嘉鴻",
+        "category": "期刊論文",
+        "date": "2025-06",
+        "source": "淡江外語論叢Tamkang Studies of Foreign Languages and Literatures",
+        "title": "The Eighteenth-Century Women's Economy and Property: Maternal Inheritance in Sarah Scott's Millenium Hall"
+      },
+      {
+        "authors": "林嘉鴻,呂虹瑾",
+        "category": "期刊論文",
+        "date": "2024-12",
+        "source": "淡江外語論叢Tamkang Studies of Foreign Languages and Literature",
+        "title": "Exploring Ecogothic Paradoxes: The Southern Swamp in Anne Rice’s Interview with the Vampire"
+      },
+      {
+        "authors": "Chia-Hung Lin",
+        "category": "專書",
+        "date": "2024-12",
+        "source": "",
+        "title": "Ecogothic and Monster Science: Rethinking the Human–Nature Relationship in Nineteenth-Century Gothic Literature"
+      },
+      {
+        "authors": "林嘉鴻",
+        "category": "研討會論文",
+        "date": "2024-10",
+        "source": "",
+        "title": "過濾未知：《湮滅》⽣態哥德式探索"
+      },
+      {
+        "authors": "Max Chia-Hung Lin",
+        "category": "研討會論文",
+        "date": "2023-12",
+        "source": "",
+        "title": "Nature’s Ambiguous Splendor: An Exploration of Paradoxical Aesthetics in Nathaniel Hawthorne’s ‘Rappaccini’s Daughter’"
+      },
+      {
+        "authors": "林嘉鴻",
+        "category": "研討會論文",
+        "date": "2021-10",
+        "source": "",
+        "title": "機器之靈/零：阿西莫夫《機器嬰兒》非物質靈性無目的悖論"
+      },
+      {
+        "authors": "林嘉鴻",
+        "category": "研討會論文",
+        "date": "2020-10",
+        "source": "",
+        "title": "惡美幻實：依薩．阿西莫夫《機器人夢》碎形邏輯"
+      },
+      {
+        "authors": "林嘉鴻",
+        "category": "研討會論文",
+        "date": "2020-05",
+        "source": "",
+        "title": "歧異/奇譯：澎湖蔡廷蘭之外國漂流跨域微觀"
+      },
+      {
+        "authors": "林嘉鴻",
+        "category": "研討會論文",
+        "date": "2019-11",
+        "source": "",
+        "title": "造與躁：依薩．阿西莫夫《機器人》系列之人與人造『軀體標記』機制動能"
+      },
+      {
+        "authors": "林嘉鴻",
+        "category": "研討會論文",
+        "date": "2019-06",
+        "source": "",
+        "title": "人不人，怪不怪？理察．邁森《我是傳奇》與醫療霸權論述"
+      },
+      {
+        "authors": "Max Chia-Hung Lin, Paul Juinn Bing Tan",
+        "category": "期刊論文",
+        "date": "2018-02",
+        "source": "Journal for the Study of Religions and Ideologies (A&HCI)",
+        "title": "Vampirism: A Secular, Visceral Religion of Paradoxical Aesthetics"
+      },
+      {
+        "authors": "Paul Juinn Bing Tan; Chia-Cheng Chao; Max Chia-Hung Lin; Ming-Hung Hsu",
+        "category": "期刊論文",
+        "date": "2017-",
+        "source": "Industrial Electronics and Applications(ICIEA) (EI)",
+        "title": "Wind turbine monitoring warning device"
+      },
+      {
+        "authors": "林嘉鴻",
+        "category": "研討會論文",
+        "date": "2016-03",
+        "source": "",
+        "title": "舊地重遊？布雷特．艾利斯《皇家臥室》戲謔/虐過去現在身命表層掙扎痛感美學時間性實驗"
+      },
+      {
+        "authors": "林嘉鴻",
+        "category": "研討會論文",
+        "date": "2015-10",
+        "source": "",
+        "title": "誘惑的厭噁隱晦: 安．萊斯《夜訪吸血鬼》的飲血族裔秘密之美學轉捩與焦慮掙扎戲耍"
+      },
+      {
+        "authors": "林嘉鴻",
+        "category": "研討會論文",
+        "date": "2015-05",
+        "source": "",
+        "title": "不適之適：布雷特．艾利斯《美國殺人魔》的淺/潛能身體穿刺切解儀式"
+      },
+      {
+        "authors": "Chia-Hung Lin",
+        "category": "研討會論文",
+        "date": "2014-05",
+        "source": "",
+        "title": "Repulsive Enjoyment of Murders: Hannibal Lecter’s Dreadfully Aesthetic Teaching"
+      },
+      {
+        "authors": "林嘉鴻",
+        "category": "研討會論文",
+        "date": "2014-05",
+        "source": "",
+        "title": "身命餘/娛/愉力：漢尼拔．萊特多餘殘餘實驗美學策略"
+      },
+      {
+        "authors": "林嘉鴻",
+        "category": "研討會論文",
+        "date": "2010-11",
+        "source": "",
+        "title": "日常之延異美學：塔娜．法蘭琪《神秘化身》之戲耍扮演愉悅"
+      }
+    ],
+    "email": "165220@mail.tku.edu.tw",
+    "courses": []
+  }
+]

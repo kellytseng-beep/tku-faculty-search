@@ -1,0 +1,868 @@
+{
+  "tflx": [
+    {
+      "name": "蔡振興",
+      "rank": "教授",
+      "role": "教授",
+      "education": "國立台灣大學外文研究所博士",
+      "expertise": "",
+      "email": "088024@o365.tku.edu.tw",
+      "uid": "t711706",
+      "photo": ""
+    },
+    {
+      "name": "林怡弟",
+      "rank": "教授",
+      "role": "教授",
+      "education": "淡江大學英文學系英語教學博士",
+      "expertise": "",
+      "email": "118589@o365.tku.edu.tw",
+      "uid": "t991312",
+      "photo": ""
+    },
+    {
+      "name": "陳佩筠",
+      "rank": "教授",
+      "role": "教授",
+      "education": "紐約州立大學賓漢頓分校比較文學博士",
+      "expertise": "",
+      "email": "130990@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "曾郁景",
+      "rank": "教授",
+      "role": "教授",
+      "education": "紐約州立大學奧本尼分校人類學系博士",
+      "expertise": "",
+      "email": "134940@o365.tku.edu.tw",
+      "uid": "t986267",
+      "photo": ""
+    },
+    {
+      "name": "羅艾琳",
+      "rank": "教授",
+      "role": "教授",
+      "education": "德克薩斯大學奧斯汀分校英語系博士",
+      "expertise": "",
+      "email": "136626@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "小澤自然",
+      "rank": "教授",
+      "role": "教授",
+      "education": "英國愛塞克斯大學文學部文學博士",
+      "expertise": "",
+      "email": "143561@o365.tku.edu.tw",
+      "uid": "t968359",
+      "photo": ""
+    },
+    {
+      "name": "吳怡芬",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "英國艾賽克斯大學文學博士",
+      "expertise": "",
+      "email": "119320@o365.tku.edu.tw",
+      "uid": "t992807",
+      "photo": ""
+    },
+    {
+      "name": "涂銘宏",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "美國威斯康辛大學麥迪遜分校比較文學系",
+      "expertise": "",
+      "email": "124841@o365.tku.edu.tw",
+      "uid": "t906169",
+      "photo": ""
+    },
+    {
+      "name": "張慈珊",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "南伊利諾大學英文學系博士",
+      "expertise": "",
+      "email": "125009@o365.tku.edu.tw",
+      "uid": "t903772",
+      "photo": ""
+    },
+    {
+      "name": "張雅慧",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "印第安納大學布魯明頓校區語言教育博士",
+      "expertise": "",
+      "email": "126445@o365.tku.edu.tw",
+      "uid": "t905663",
+      "photo": ""
+    },
+    {
+      "name": "齊嵩齡",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "法國巴黎第三大學比較文學系",
+      "expertise": "",
+      "email": "128829@o365.tku.edu.tw",
+      "uid": "t901102",
+      "photo": ""
+    },
+    {
+      "name": "蔡瑞敏",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "俄亥俄州立大學外語暨第二語言教育博士",
+      "expertise": "",
+      "email": "132590@o365.tku.edu.tw",
+      "uid": "t980327",
+      "photo": ""
+    },
+    {
+      "name": "錢欽昭",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "艾賽克斯大學文學系博士",
+      "expertise": "",
+      "email": "134080@o365.tku.edu.tw",
+      "uid": "t986717",
+      "photo": ""
+    },
+    {
+      "name": "薛玉政",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "新堡大學教育與應用語言學博士",
+      "expertise": "",
+      "email": "134099@o365.tku.edu.tw",
+      "uid": "t986722",
+      "photo": ""
+    },
+    {
+      "name": "鄧秋蓉",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "紐約州立大學水牛城分校 英文系博士",
+      "expertise": "",
+      "email": "138870@o365.tku.edu.tw",
+      "uid": "t981147",
+      "photo": ""
+    },
+    {
+      "name": "郭家珍",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "國立台灣大學外國語文學系博士",
+      "expertise": "",
+      "email": "141798@o365.tku.edu.tw",
+      "uid": "t969421",
+      "photo": ""
+    },
+    {
+      "name": "李佳盈",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "愛荷華大學外語教學所博士",
+      "expertise": "",
+      "email": "142984@o365.tku.edu.tw",
+      "uid": "t960216",
+      "photo": ""
+    },
+    {
+      "name": "林銘輝",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "英國伯明罕大學英文系博士",
+      "expertise": "",
+      "email": "144720@o365.tku.edu.tw",
+      "uid": "t966407",
+      "photo": ""
+    },
+    {
+      "name": "張介英",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "英國倫敦帝國理工學院人文系",
+      "expertise": "",
+      "email": "159738@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "劉佩勳",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "美國賓州印第安那大學英文寫作教學與應用語言學博士",
+      "expertise": "",
+      "email": "165214@o365.tku.edu.tw",
+      "uid": "t953096",
+      "photo": ""
+    },
+    {
+      "name": "吳瑜雲",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "淡江大學英文學系博士",
+      "expertise": "",
+      "email": "078528@o365.tku.edu.tw",
+      "uid": "t741301",
+      "photo": ""
+    },
+    {
+      "name": "包俊傑",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "淡江大學英文系博士",
+      "expertise": "",
+      "email": "133163@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "王蔚婷",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "美國喬治亞大學成人教育學系",
+      "expertise": "",
+      "email": "133321@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "莊晏甄",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "美國羅格斯大學比較文學系博士",
+      "expertise": "",
+      "email": "138460@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "雷　凱",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "淡江大學英文學系博士班",
+      "expertise": "",
+      "email": "141145@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "吳凱書",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "國立中山大學外國語文學研究所博士",
+      "expertise": "",
+      "email": "151766@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "熊婷惠",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "中山大學外國語文學系文學博士",
+      "expertise": "",
+      "email": "154050@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "陳家倩",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "輔仁大學比較文學博士",
+      "expertise": "",
+      "email": "158318@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "林嘉鴻",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "國立政治大學英國語文學系博士",
+      "expertise": "",
+      "email": "165220@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "朱敏禎",
+      "rank": "助教",
+      "role": "助教",
+      "education": "",
+      "expertise": "",
+      "email": "147864@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    }
+  ],
+  "tfjx": [
+    {
+      "name": "彭春陽",
+      "rank": "教授",
+      "role": "專案教授兼校友服務處執行長",
+      "education": "九州大學日本文學研究所",
+      "expertise": "日本近代文學、中日比較文學、日語教學",
+      "email": "083725@o365.tku.edu.tw",
+      "uid": "t718403",
+      "photo": ""
+    },
+    {
+      "name": "曾秋桂",
+      "rank": "教授",
+      "role": "教授兼村上春樹研究中心主任",
+      "education": "廣島大學社會科學研究所博士",
+      "expertise": "日本近代文學、村上春樹文學、中日比較文學、宮崎駿動画研究、日本殖民地台灣文學(張文環研究)、日本語古典文法、日本漢文訓讀、日本語教學",
+      "email": "095686@o365.tku.edu.tw",
+      "uid": "t723515",
+      "photo": ""
+    },
+    {
+      "name": "闕百華",
+      "rank": "教授",
+      "role": "教授",
+      "education": "國立東北大學教育學研究科博士",
+      "expertise": "日語教育、日本社会文化、日本教育研究、日語文分科教材教法",
+      "email": "102278@o365.tku.edu.tw",
+      "uid": "t970041",
+      "photo": ""
+    },
+    {
+      "name": "江雯薰",
+      "rank": "教授",
+      "role": "教授",
+      "education": "國立岡山大學文化科學研究科博士",
+      "expertise": "日本語學",
+      "email": "120556@o365.tku.edu.tw",
+      "uid": "t907335",
+      "photo": ""
+    },
+    {
+      "name": "王嘉臨",
+      "rank": "教授",
+      "role": "教授",
+      "education": "國立東北大學文學研究科博士",
+      "expertise": "日本文學",
+      "email": "137176@o365.tku.edu.tw",
+      "uid": "t984945",
+      "photo": ""
+    },
+    {
+      "name": "葉　夌",
+      "rank": "教授",
+      "role": "教授",
+      "education": "熊本大學社會文學科學研究科博士",
+      "expertise": "日本近現代文學",
+      "email": "152790@o365.tku.edu.tw",
+      "uid": "t930427",
+      "photo": ""
+    },
+    {
+      "name": "顧錦芬",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "日本東北大學文學研究科國文學專攻博士後期課程學分修了",
+      "expertise": "日本近代文學",
+      "email": "095052@o365.tku.edu.tw",
+      "uid": "t723730",
+      "photo": ""
+    },
+    {
+      "name": "林寄雯",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "安田女子大學文學研究科博士",
+      "expertise": "日本近代文學、翻譯教學",
+      "email": "096976@o365.tku.edu.tw",
+      "uid": "t725245",
+      "photo": ""
+    },
+    {
+      "name": "富田哲",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "國立名古屋大學國際開發研究科博士",
+      "expertise": "台灣史、社會語言學",
+      "email": "114520@o365.tku.edu.tw",
+      "uid": "t996307",
+      "photo": ""
+    },
+    {
+      "name": "堀越和男",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "日本大正大學文學研究科博士",
+      "expertise": "第二語言習得研究",
+      "email": "122496@o365.tku.edu.tw",
+      "uid": "t900625",
+      "photo": ""
+    },
+    {
+      "name": "蔡欣吟",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "明治大學文學研究科博士",
+      "expertise": "日本語學、教育學",
+      "email": "125134@o365.tku.edu.tw",
+      "uid": "t903986",
+      "photo": ""
+    },
+    {
+      "name": "中村香苗",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "威斯康辛大學麥迪遜分校東亞語文學系博士",
+      "expertise": "日本語學、會話分析、相互行為言語學、日本語教學",
+      "email": "128094@o365.tku.edu.tw",
+      "uid": "t901726",
+      "photo": ""
+    },
+    {
+      "name": "施信余",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "早稻田大學日本語教育研究科博士",
+      "expertise": "日本語教育、會話分析",
+      "email": "133200@o365.tku.edu.tw",
+      "uid": "t988077",
+      "photo": ""
+    },
+    {
+      "name": "王美玲",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "山口大學東亞研究科博士",
+      "expertise": "台日比較教育、日本社會、社會學",
+      "email": "133430@o365.tku.edu.tw",
+      "uid": "t988687",
+      "photo": ""
+    },
+    {
+      "name": "廖育卿",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "熊本大學社會文化科學研究科博士",
+      "expertise": "日本近代文學、茶道教育",
+      "email": "135990@o365.tku.edu.tw",
+      "uid": "t983227",
+      "photo": ""
+    },
+    {
+      "name": "蔡佩青",
+      "rank": "副教授",
+      "role": "副教授兼系主任",
+      "education": "名古屋大學文學博士",
+      "expertise": "日本古典文學.日語教材開發",
+      "email": "136728@o365.tku.edu.tw",
+      "uid": "t985401",
+      "photo": ""
+    },
+    {
+      "name": "李文茹",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "名古屋大學人間情報研究科文學系博士",
+      "expertise": "日本近代文學、日治時期文學文化、女性文學",
+      "email": "138390@o365.tku.edu.tw",
+      "uid": "t981827",
+      "photo": ""
+    },
+    {
+      "name": "徐佩伶",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "九州大學人文科學府言語學系博士",
+      "expertise": "理論言語學、統語論",
+      "email": "139030@o365.tku.edu.tw",
+      "uid": "t982787",
+      "photo": ""
+    },
+    {
+      "name": "賴鈺菁",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "名古屋大學國際言語文化研究科博士",
+      "expertise": "明治維新史、江戶武士道、日中比較文化思想史",
+      "email": "145908@o365.tku.edu.tw",
+      "uid": "t963271",
+      "photo": ""
+    },
+    {
+      "name": "菊島和紀",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "國立清華大學語言學研究所博士",
+      "expertise": "形式句法理論、日語句法、對照語言學",
+      "email": "146336@o365.tku.edu.tw",
+      "uid": "t965885",
+      "photo": ""
+    },
+    {
+      "name": "樋口達郎",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "筑波大學人文社會科學研究科博士",
+      "expertise": "日本文化思想、日本古典文學",
+      "email": "157556@o365.tku.edu.tw",
+      "uid": "t934335",
+      "photo": ""
+    },
+    {
+      "name": "伍耿逸",
+      "rank": "助教",
+      "role": "助教",
+      "education": "淡江大學日文系碩士班",
+      "expertise": "日本社會文化、日語教學",
+      "email": "149110@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    }
+  ],
+  "tfox": [
+    {
+      "name": "張慶國",
+      "rank": "教授",
+      "role": "教授兼系主任",
+      "education": "俄羅斯聖彼得堡國立大學語文學博士",
+      "expertise": "",
+      "email": "114804@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "白士清",
+      "rank": "教授",
+      "role": "教授",
+      "education": "西班牙拿瓦拉大學文哲博士",
+      "expertise": "",
+      "email": "112497@o365.tku.edu.tw",
+      "uid": "t990624",
+      "photo": ""
+    },
+    {
+      "name": "張國蕾",
+      "rank": "教授",
+      "role": "教授",
+      "education": "法國巴黎第三大學法語教學博士",
+      "expertise": "",
+      "email": "emilie@mail.tku.edu.tw",
+      "uid": "t711031",
+      "photo": ""
+    },
+    {
+      "name": "徐鵬飛",
+      "rank": "教授",
+      "role": "教授",
+      "education": "法國巴黎第四大學宗教人類學博士",
+      "expertise": "",
+      "email": "boileau@mail.tku.edu.tw",
+      "uid": "t727002",
+      "photo": ""
+    },
+    {
+      "name": "梁蓉",
+      "rank": "教授",
+      "role": "教授",
+      "education": "法國巴黎第十大學表演藝術博士",
+      "expertise": "",
+      "email": "103764@o365.tku.edu.tw",
+      "uid": "t978456",
+      "photo": ""
+    },
+    {
+      "name": "吳萬寶",
+      "rank": "教授",
+      "role": "教授",
+      "education": "德國薩蘭大學法律既經濟學院政治系博士",
+      "expertise": "",
+      "email": "149530@o365.tku.edu.tw",
+      "uid": "t962387",
+      "photo": ""
+    },
+    {
+      "name": "林惠瑛",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "西班牙拿瓦拉大學文哲博士",
+      "expertise": "",
+      "email": "069490@o365.tku.edu.tw",
+      "uid": "t752627",
+      "photo": ""
+    },
+    {
+      "name": "何萬儀",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "西班牙康普魯登斯大學西班牙語言學博士",
+      "expertise": "",
+      "email": "122468@o365.tku.edu.tw",
+      "uid": "t900651",
+      "photo": ""
+    },
+    {
+      "name": "戴毓芬",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "西班牙巴塞隆納自治大學翻譯理論博士",
+      "expertise": "",
+      "email": "096706@o365.tku.edu.tw",
+      "uid": "t725475",
+      "photo": ""
+    },
+    {
+      "name": "劉愛玲",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "西班牙拿瓦拉大學傳播學博士",
+      "expertise": "",
+      "email": "122710@o365.tku.edu.tw",
+      "uid": "t900497",
+      "photo": ""
+    },
+    {
+      "name": "孔方明",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "西班牙馬德里自治大學比較文學博士",
+      "expertise": "",
+      "email": "148630@o365.tku.edu.tw",
+      "uid": "t961587",
+      "photo": ""
+    },
+    {
+      "name": "張芸綺",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "西班牙巴塞隆納自治大學翻譯暨跨文化研究博士",
+      "expertise": "",
+      "email": "144736@o365.tku.edu.tw",
+      "uid": "t966485",
+      "photo": ""
+    },
+    {
+      "name": "劉珍綾",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "西班牙瓦雅多里大學應用語言學博士",
+      "expertise": "",
+      "email": "144966@o365.tku.edu.tw",
+      "uid": "t966255",
+      "photo": ""
+    },
+    {
+      "name": "劉莉美",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "西班牙馬德里大學語言文學博士",
+      "expertise": "",
+      "email": "148620@o365.tku.edu.tw",
+      "uid": "t961507",
+      "photo": ""
+    },
+    {
+      "name": "葉汐帆",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "西班牙巴塞隆納大學西班牙語語文學博士",
+      "expertise": "",
+      "email": "142494@o365.tku.edu.tw",
+      "uid": "t960626",
+      "photo": ""
+    },
+    {
+      "name": "徐琿輝",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "法國巴黎第七大學電腦語言學博士",
+      "expertise": "",
+      "email": "104300@o365.tku.edu.tw",
+      "uid": "t976877",
+      "photo": ""
+    },
+    {
+      "name": "林郁嫺",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "德國慕尼黑大學德國語文學系博士",
+      "expertise": "",
+      "email": "152780@o365.tku.edu.tw",
+      "uid": "t930417",
+      "photo": ""
+    },
+    {
+      "name": "施侯格",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "德國圖賓根大學德語語言學博士",
+      "expertise": "",
+      "email": "141860@o365.tku.edu.tw",
+      "uid": "t969157",
+      "photo": ""
+    },
+    {
+      "name": "顏徽玲",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "德國 Bielefeld 大學語言學博士",
+      "expertise": "",
+      "email": "151160@o365.tku.edu.tw",
+      "uid": "t939957",
+      "photo": ""
+    },
+    {
+      "name": "蘇淑燕",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "俄羅斯莫斯科國立大學語文學博士",
+      "expertise": "",
+      "email": "112556@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "劉皇杏",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "俄羅斯莫斯科國立大學語文學博士",
+      "expertise": "",
+      "email": "119342@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "龔雅雪",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "俄羅斯莫斯科國立師範大學語文學博士",
+      "expertise": "",
+      "email": "122500@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "郭昕宜",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "俄羅斯莫斯科國立大學亞非學院語言學博士",
+      "expertise": "",
+      "email": "126230@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "那達怡",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "俄羅斯聖彼得堡國立大學語文學博士",
+      "expertise": "",
+      "email": "133212@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "鄭盈盈",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "俄羅斯莫斯科國立大學語文學博士",
+      "expertise": "",
+      "email": "133220@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "史薇塔",
+      "rank": "副教授",
+      "role": "副教授",
+      "education": "俄羅斯莫斯科普希金外語學院語文學博士",
+      "expertise": "",
+      "email": "136046@o365.tku.edu.tw",
+      "uid": "",
+      "photo": ""
+    },
+    {
+      "name": "李文進",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "西班牙塞維亞大學西班牙文學系博士",
+      "expertise": "",
+      "email": "159740@o365.tku.edu.tw",
+      "uid": "t932467",
+      "photo": ""
+    },
+    {
+      "name": "羅雅芳",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "西語教學、商務西語、中西口筆譯",
+      "expertise": "",
+      "email": "164030@o365.tku.edu.tw",
+      "uid": "t956787",
+      "photo": ""
+    },
+    {
+      "name": "陳麗娟",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "法國史特拉斯堡大學語言學博士",
+      "expertise": "",
+      "email": "135958@o365.tku.edu.tw",
+      "uid": "t983231",
+      "photo": ""
+    },
+    {
+      "name": "廖潤珮",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "法國 巴黎大學 東區克列帖學區 (原十二大) 法國文學比較文學博士",
+      "expertise": "",
+      "email": "135978@o365.tku.edu.tw",
+      "uid": "t983241",
+      "photo": ""
+    },
+    {
+      "name": "康鈺珮",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "法國巴黎第八大學性別研究博士",
+      "expertise": "",
+      "email": "148138@o365.tku.edu.tw",
+      "uid": "t961981",
+      "photo": ""
+    },
+    {
+      "name": "陳瑋靜",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "法國里昂第二大學語言學博士",
+      "expertise": "",
+      "email": "157360@o365.tku.edu.tw",
+      "uid": "t934857",
+      "photo": ""
+    },
+    {
+      "name": "張秀娟",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "Katholische Universität Eichstätt-Ingolstadt(德國)德語教學博士",
+      "expertise": "",
+      "email": "125166@o365.tku.edu.tw",
+      "uid": "t903955",
+      "photo": ""
+    },
+    {
+      "name": "孫敏學",
+      "rank": "助理教授",
+      "role": "助理教授",
+      "education": "德國杜賓根大學漢學博士",
+      "expertise": "",
+      "email": "148146@o365.tku.edu.tw",
+      "uid": "t961965",
+      "photo": ""
+    }
+  ]
+}

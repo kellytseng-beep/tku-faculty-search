@@ -1,0 +1,66 @@
+name: Update Faculty Data
+
+on:
+  schedule:
+    # Every Monday 01:00 Taipei time = Sunday 17:00 UTC
+    - cron: '0 17 * * 0'
+  workflow_dispatch:  # allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: 1. Scrape official dept sites (rosters, emails, ranks)
+        run: python scrape_dept_sites.py
+
+      - name: 2. Merge dept data into v2 (updates emails + ranks, adds new teachers)
+        run: python merge_dept_data.py
+
+      - name: 3. Fix missing + sub-group info (TFOX 法/德/西/俄)
+        run: python fix_missing.py
+
+      - name: 4. Refresh NSC publications for all teachers
+        run: python refresh_publications.py
+        continue-on-error: true  # NSC API (Render free tier) can be slow
+
+      - name: 5. Scrape TPR (教學實踐研究計畫)
+        run: python scrape_tpr.py
+
+      - name: 6. Scrape NSTC (國科會研究計畫)
+        run: python scrape_nstc.py
+        timeout-minutes: 25
+        continue-on-error: true  # NSTC server uses old SSL; may fail
+
+      - name: 7. Rebuild HTML pages
+        run: python build_all_depts.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tflx_teachers_v2.json tfjx_teachers_v2.json tfox_teachers_v2.json \
+                  dept_sites_data.json tpr_data.json nstc_data.json \
+                  tflx_teachers.html tfjx_teachers.html tfox_teachers.html faculty_hub.html
+          if git diff --cached --quiet; then
+            echo "✓ No changes this week."
+          else
+            DATE=$(TZ=Asia/Taipei date +%Y-%m-%d)
+            git commit -m "Auto-update faculty data ${DATE}"
+            git push
+            echo "✓ Pushed updates for ${DATE}"
+          fi

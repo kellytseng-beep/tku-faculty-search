@@ -1,0 +1,6 @@
+{
+  "_comment": "Names that should NEVER be auto-added by weekly scraper, even if they still appear on dept sites. Edit this list to permanently remove teachers.",
+  "tflx": [],
+  "tfjx": [],
+  "tfox": ["巫宛真"]
+}
