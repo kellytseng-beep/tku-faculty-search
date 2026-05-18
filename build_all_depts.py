@@ -828,7 +828,7 @@ window.ALL_TEACHERS = {json.dumps(ALL_TEACHERS_SUMMARY, ensure_ascii=False)};
         檢視名單
       </button>
       <button onclick="selectAllVisible()" class="px-2.5 py-1.5 text-xs border border-slate-300 rounded-lg text-slate-600 hover:bg-slate-50 whitespace-nowrap">
-        勾選本頁顯示中
+        勾選全部
       </button>
       <button onclick="clearSel()" class="px-2.5 py-1.5 text-xs border border-slate-300 rounded-lg text-slate-600 hover:bg-slate-50 whitespace-nowrap">
         清除全部
@@ -837,7 +837,7 @@ window.ALL_TEACHERS = {json.dumps(ALL_TEACHERS_SUMMARY, ensure_ascii=False)};
         📊 匯出 Excel
       </button>
       <button id="btnSendSelected" onclick="sendMail()" class="flex-1 sm:flex-none px-4 py-1.5 text-xs bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 whitespace-nowrap">
-        ✉️ 寄給已勾選 <span id="selCount2" class="font-bold"></span>
+        ✉️ 寄信給已勾選 <span id="selCount2" class="font-bold"></span>
       </button>
     </div>
   </div>
