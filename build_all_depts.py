@@ -448,36 +448,137 @@ function sendMail() {
   window.location.href = 'mailto:' + emails.join(',');
 }
 
-function exportXlsx() {
+// Cleanse sheet name (Excel max 31 chars, no / \\ ? * [ ] :)
+function _safeSheetName(name, usedNames) {
+  var s = (name || 'unknown').replace(/[\\/?*[\]:]/g, '_').substring(0, 28);
+  var base = s, i = 2;
+  while (usedNames[s]) { s = (base + '_' + i).substring(0, 28); i++; }
+  usedNames[s] = true;
+  return s;
+}
+
+async function exportXlsx() {
   var keys = Object.keys(selectedEmails);
   if (keys.length === 0) { alert('請先勾選教師'); return; }
-  var emailSet = {};
-  keys.forEach(function(e) { emailSet[e] = true; });
-  var rows = (window.ALL_TEACHERS || []).filter(function(t) { return emailSet[t.email]; });
-  if (rows.length === 0) { alert('找不到對應的教師資料'); return; }
 
-  var aoa = [[
-    '系所', '中文姓名', '英文姓名', '職稱', '組別', 'Email', '專長',
-    '著作篇數', '國科會計畫件數', '教學實踐計畫件數', '教師歷程', '當學期課表'
-  ]];
-  rows.forEach(function(t) {
-    aoa.push([
-      t.dept, t.name, t.nameEn, t.rank, t.group, t.email, t.expertise,
-      t.pubCount, t.nstcCount, t.tprCount, t.profileUrl, t.scheduleUrl
+  var btn = document.querySelector('button[onclick="exportXlsx()"]');
+  var oldText = btn ? btn.innerHTML : '';
+  if (btn) { btn.innerHTML = '⏳ 準備中…'; btn.disabled = true; }
+
+  try {
+    var [tflx, tfjx, tfox, nstc, tpr] = await Promise.all([
+      fetch('tflx_teachers_v2.json').then(function(r){return r.json();}),
+      fetch('tfjx_teachers_v2.json').then(function(r){return r.json();}),
+      fetch('tfox_teachers_v2.json').then(function(r){return r.json();}),
+      fetch('nstc_data.json').then(function(r){return r.json();}),
+      fetch('tpr_data.json').then(function(r){return r.json();}),
     ]);
-  });
+    var allTeachers = []
+      .concat(tflx.map(function(t){t._dept='英文學系';return t;}))
+      .concat(tfjx.map(function(t){t._dept='日文學系';return t;}))
+      .concat(tfox.map(function(t){t._dept='歐語學系';return t;}));
+    var emailSet = {};
+    keys.forEach(function(e){ emailSet[e] = true; });
+    var selected = allTeachers.filter(function(t){ return emailSet[t.email]; });
+    if (selected.length === 0) { alert('找不到對應的教師資料'); return; }
 
-  var ws = XLSX.utils.aoa_to_sheet(aoa);
-  ws['!cols'] = [
-    {wch:8}, {wch:10}, {wch:22}, {wch:10}, {wch:8}, {wch:28}, {wch:35},
-    {wch:9}, {wch:14}, {wch:16}, {wch:50}, {wch:50}
-  ];
-  var wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, '師資清單');
+    var nstcByName = (nstc && nstc.projects_by_name) || {};
+    var tprByName  = (tpr  && tpr.projects_by_name)  || {};
 
-  var d = new Date();
-  var dateStr = d.getFullYear() + ('0'+(d.getMonth()+1)).slice(-2) + ('0'+d.getDate()).slice(-2);
-  XLSX.writeFile(wb, '淡江外語師資_' + rows.length + '位_' + dateStr + '.xlsx');
+    var wb = XLSX.utils.book_new();
+
+    // ── Sheet 1: 摘要 ──
+    var summaryAoa = [[
+      '系所','中文姓名','英文姓名','職稱','組別','Email','專長',
+      '著作篇數','國科會計畫件數','教學實踐計畫件數','教師歷程','當學期課表'
+    ]];
+    selected.forEach(function(t){
+      summaryAoa.push([
+        t._dept, t.name, t.nameEn || '', t.rank || '', t.group || '',
+        t.email || '', t.expertise || '',
+        (t.publications||[]).length,
+        (nstcByName[t.name]||[]).length,
+        (tprByName[t.name]||[]).length,
+        t.profileUrl || '',
+        t.uid ? 'https://teacher.tku.edu.tw/PsnSchoolTime.aspx?u=' + t.uid : ''
+      ]);
+    });
+    var wsSummary = XLSX.utils.aoa_to_sheet(summaryAoa);
+    wsSummary['!cols'] = [
+      {wch:9},{wch:10},{wch:22},{wch:10},{wch:8},{wch:28},{wch:35},
+      {wch:9},{wch:14},{wch:16},{wch:50},{wch:50}
+    ];
+    XLSX.utils.book_append_sheet(wb, wsSummary, '摘要');
+
+    // ── Per-teacher detail sheets ──
+    var usedNames = {'摘要': true};
+    selected.forEach(function(t) {
+      var aoa = [];
+      // Header block
+      aoa.push(['中文姓名', t.name]);
+      if (t.nameEn) aoa.push(['英文姓名', t.nameEn]);
+      aoa.push(['系所', t._dept]);
+      aoa.push(['職稱', t.rank || '']);
+      if (t.group) aoa.push(['組別', t.group]);
+      aoa.push(['Email', t.email || '']);
+      if (t.expertise) aoa.push(['專長', t.expertise]);
+      if (t.education) aoa.push(['學歷', t.education]);
+      if (t.profileUrl) aoa.push(['教師歷程', t.profileUrl]);
+      if (t.uid) aoa.push(['當學期課表', 'https://teacher.tku.edu.tw/PsnSchoolTime.aspx?u=' + t.uid]);
+      aoa.push([]);
+
+      // Publications
+      var pubs = t.publications || [];
+      aoa.push(['著作 (' + pubs.length + ' 篇)']);
+      if (pubs.length > 0) {
+        aoa.push(['年月','類別','篇名','作者','出處']);
+        pubs.forEach(function(p) {
+          aoa.push([p.date || '', p.category || '', p.title || '', p.authors || '', p.source || '']);
+        });
+      } else {
+        aoa.push(['（無資料）']);
+      }
+      aoa.push([]);
+
+      // NSTC projects
+      var nstcProjs = nstcByName[t.name] || [];
+      aoa.push(['國科會研究計畫 (' + nstcProjs.length + ' 件)']);
+      if (nstcProjs.length > 0) {
+        aoa.push(['年度','執行機關','計畫名稱','執行起迄','總核定金額']);
+        nstcProjs.forEach(function(p) {
+          aoa.push([p.year || '', p.org || '', p.title || '', p.dates || '', p.amount || '']);
+        });
+      } else {
+        aoa.push(['（無資料）']);
+      }
+      aoa.push([]);
+
+      // TPR projects
+      var tprProjs = tprByName[t.name] || [];
+      aoa.push(['教學實踐研究計畫 (' + tprProjs.length + ' 件)']);
+      if (tprProjs.length > 0) {
+        aoa.push(['年度','學門','期程','系所','計畫名稱']);
+        tprProjs.forEach(function(p) {
+          aoa.push([p.year || '', p.field || '', p.period || '', p.department || '', p.project || '']);
+        });
+      } else {
+        aoa.push(['（無資料）']);
+      }
+
+      var ws = XLSX.utils.aoa_to_sheet(aoa);
+      ws['!cols'] = [{wch:14},{wch:14},{wch:50},{wch:25},{wch:30}];
+      XLSX.utils.book_append_sheet(wb, ws, _safeSheetName(t.name, usedNames));
+    });
+
+    var d = new Date();
+    var dateStr = d.getFullYear() + ('0'+(d.getMonth()+1)).slice(-2) + ('0'+d.getDate()).slice(-2);
+    XLSX.writeFile(wb, '淡江外語師資詳細_' + selected.length + '位_' + dateStr + '.xlsx');
+  } catch (e) {
+    alert('匯出失敗：' + e.message);
+    console.error(e);
+  } finally {
+    if (btn) { btn.innerHTML = oldText; btn.disabled = false; }
+  }
 }
 
 function showSelList() {
@@ -906,34 +1007,111 @@ function hubSend() {{
   if (keys.length === 0) return;
   window.location.href = 'mailto:' + keys.join(',');
 }}
-function hubExportXlsx() {{
+function _hubSafeSheetName(name, used) {{
+  var s = (name || 'unknown').replace(/[\\\\/?*[\\]:]/g, '_').substring(0, 28);
+  var base = s, i = 2;
+  while (used[s]) {{ s = (base + '_' + i).substring(0, 28); i++; }}
+  used[s] = true;
+  return s;
+}}
+async function hubExportXlsx() {{
   var sel = hubLoad();
   var keys = Object.keys(sel);
   if (keys.length === 0) {{ alert('請先到各系所頁面勾選教師'); return; }}
-  var emailSet = {{}};
-  keys.forEach(function(e) {{ emailSet[e] = true; }});
-  var rows = (window.ALL_TEACHERS || []).filter(function(t) {{ return emailSet[t.email]; }});
-  if (rows.length === 0) {{ alert('找不到對應的教師資料'); return; }}
-  var aoa = [[
-    '系所', '中文姓名', '英文姓名', '職稱', '組別', 'Email', '專長',
-    '著作篇數', '國科會計畫件數', '教學實踐計畫件數', '教師歷程', '當學期課表'
-  ]];
-  rows.forEach(function(t) {{
-    aoa.push([
-      t.dept, t.name, t.nameEn, t.rank, t.group, t.email, t.expertise,
-      t.pubCount, t.nstcCount, t.tprCount, t.profileUrl, t.scheduleUrl
+
+  var btn = document.querySelector('button[onclick="hubExportXlsx()"]');
+  var oldText = btn ? btn.innerHTML : '';
+  if (btn) {{ btn.innerHTML = '⏳ 準備中…'; btn.disabled = true; }}
+
+  try {{
+    var [tflx, tfjx, tfox, nstc, tpr] = await Promise.all([
+      fetch('tflx_teachers_v2.json').then(function(r){{return r.json();}}),
+      fetch('tfjx_teachers_v2.json').then(function(r){{return r.json();}}),
+      fetch('tfox_teachers_v2.json').then(function(r){{return r.json();}}),
+      fetch('nstc_data.json').then(function(r){{return r.json();}}),
+      fetch('tpr_data.json').then(function(r){{return r.json();}}),
     ]);
-  }});
-  var ws = XLSX.utils.aoa_to_sheet(aoa);
-  ws['!cols'] = [
-    {{wch:8}}, {{wch:10}}, {{wch:22}}, {{wch:10}}, {{wch:8}}, {{wch:28}}, {{wch:35}},
-    {{wch:9}}, {{wch:14}}, {{wch:16}}, {{wch:50}}, {{wch:50}}
-  ];
-  var wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, '師資清單');
-  var d = new Date();
-  var dateStr = d.getFullYear() + ('0'+(d.getMonth()+1)).slice(-2) + ('0'+d.getDate()).slice(-2);
-  XLSX.writeFile(wb, '淡江外語師資_' + rows.length + '位_' + dateStr + '.xlsx');
+    var allTeachers = []
+      .concat(tflx.map(function(t){{t._dept='英文學系';return t;}}))
+      .concat(tfjx.map(function(t){{t._dept='日文學系';return t;}}))
+      .concat(tfox.map(function(t){{t._dept='歐語學系';return t;}}));
+    var emailSet = {{}};
+    keys.forEach(function(e){{ emailSet[e] = true; }});
+    var selected = allTeachers.filter(function(t){{ return emailSet[t.email]; }});
+    if (selected.length === 0) {{ alert('找不到對應的教師資料'); return; }}
+
+    var nstcByName = (nstc && nstc.projects_by_name) || {{}};
+    var tprByName  = (tpr  && tpr.projects_by_name)  || {{}};
+
+    var wb = XLSX.utils.book_new();
+
+    var summaryAoa = [[
+      '系所','中文姓名','英文姓名','職稱','組別','Email','專長',
+      '著作篇數','國科會計畫件數','教學實踐計畫件數','教師歷程','當學期課表'
+    ]];
+    selected.forEach(function(t){{
+      summaryAoa.push([
+        t._dept, t.name, t.nameEn || '', t.rank || '', t.group || '',
+        t.email || '', t.expertise || '',
+        (t.publications||[]).length,
+        (nstcByName[t.name]||[]).length,
+        (tprByName[t.name]||[]).length,
+        t.profileUrl || '',
+        t.uid ? 'https://teacher.tku.edu.tw/PsnSchoolTime.aspx?u=' + t.uid : ''
+      ]);
+    }});
+    var wsSummary = XLSX.utils.aoa_to_sheet(summaryAoa);
+    wsSummary['!cols'] = [{{wch:9}},{{wch:10}},{{wch:22}},{{wch:10}},{{wch:8}},{{wch:28}},{{wch:35}},{{wch:9}},{{wch:14}},{{wch:16}},{{wch:50}},{{wch:50}}];
+    XLSX.utils.book_append_sheet(wb, wsSummary, '摘要');
+
+    var usedNames = {{'摘要': true}};
+    selected.forEach(function(t) {{
+      var aoa = [];
+      aoa.push(['中文姓名', t.name]);
+      if (t.nameEn) aoa.push(['英文姓名', t.nameEn]);
+      aoa.push(['系所', t._dept]);
+      aoa.push(['職稱', t.rank || '']);
+      if (t.group) aoa.push(['組別', t.group]);
+      aoa.push(['Email', t.email || '']);
+      if (t.expertise) aoa.push(['專長', t.expertise]);
+      if (t.education) aoa.push(['學歷', t.education]);
+      if (t.profileUrl) aoa.push(['教師歷程', t.profileUrl]);
+      if (t.uid) aoa.push(['當學期課表', 'https://teacher.tku.edu.tw/PsnSchoolTime.aspx?u=' + t.uid]);
+      aoa.push([]);
+      var pubs = t.publications || [];
+      aoa.push(['著作 (' + pubs.length + ' 篇)']);
+      if (pubs.length > 0) {{
+        aoa.push(['年月','類別','篇名','作者','出處']);
+        pubs.forEach(function(p){{ aoa.push([p.date||'',p.category||'',p.title||'',p.authors||'',p.source||'']); }});
+      }} else {{ aoa.push(['（無資料）']); }}
+      aoa.push([]);
+      var nstcProjs = nstcByName[t.name] || [];
+      aoa.push(['國科會研究計畫 (' + nstcProjs.length + ' 件)']);
+      if (nstcProjs.length > 0) {{
+        aoa.push(['年度','執行機關','計畫名稱','執行起迄','總核定金額']);
+        nstcProjs.forEach(function(p){{ aoa.push([p.year||'',p.org||'',p.title||'',p.dates||'',p.amount||'']); }});
+      }} else {{ aoa.push(['（無資料）']); }}
+      aoa.push([]);
+      var tprProjs = tprByName[t.name] || [];
+      aoa.push(['教學實踐研究計畫 (' + tprProjs.length + ' 件)']);
+      if (tprProjs.length > 0) {{
+        aoa.push(['年度','學門','期程','系所','計畫名稱']);
+        tprProjs.forEach(function(p){{ aoa.push([p.year||'',p.field||'',p.period||'',p.department||'',p.project||'']); }});
+      }} else {{ aoa.push(['（無資料）']); }}
+      var ws = XLSX.utils.aoa_to_sheet(aoa);
+      ws['!cols'] = [{{wch:14}},{{wch:14}},{{wch:50}},{{wch:25}},{{wch:30}}];
+      XLSX.utils.book_append_sheet(wb, ws, _hubSafeSheetName(t.name, usedNames));
+    }});
+
+    var d = new Date();
+    var dateStr = d.getFullYear() + ('0'+(d.getMonth()+1)).slice(-2) + ('0'+d.getDate()).slice(-2);
+    XLSX.writeFile(wb, '淡江外語師資詳細_' + selected.length + '位_' + dateStr + '.xlsx');
+  }} catch (e) {{
+    alert('匯出失敗：' + e.message);
+    console.error(e);
+  }} finally {{
+    if (btn) {{ btn.innerHTML = oldText; btn.disabled = false; }}
+  }}
 }}
 function hubClear() {{
   if (!confirm('清除全部選取？')) return;
