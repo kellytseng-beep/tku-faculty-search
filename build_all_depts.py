@@ -19,6 +19,9 @@ if os.path.exists("nstc_data.json"):
     except Exception:
         pass
 
+# Cross-dept teacher summary (populated in main(), embedded on every page for Excel export)
+ALL_TEACHERS_SUMMARY = []
+
 def esc(s):
     return _html.escape(str(s or ""), quote=True)
 
@@ -275,12 +278,15 @@ def render_card(t):
                              + [" ".join((p.get("title","") or "").split()) for p in pubs]).lower()
     rank_order = RANK_ORDER.get(rank, 9)
 
-    # email selection checkbox — placed next to email at bottom of card
+    # Selection checkbox — top-right corner of card
     has_email = bool(email)
-    checkbox_html = (
-        f'<input type="checkbox" class="mail-select w-4 h-4 accent-blue-600 cursor-pointer shrink-0" '
+    corner_checkbox_html = (
+        f'<label class="absolute top-2 right-2 z-10 cursor-pointer p-1.5 rounded hover:bg-slate-100 select-none" '
+        f'title="勾選此教師（用於寄信／匯出 Excel）">'
+        f'<input type="checkbox" class="mail-select w-4 h-4 accent-blue-600 cursor-pointer" '
         f'data-email="{esc(email)}" data-name="{esc(name)}" '
-        f'onclick="event.stopPropagation(); toggleSel(this)" title="勾選以寄信">'
+        f'onclick="event.stopPropagation(); toggleSel(this)">'
+        f'</label>'
     ) if has_email else ''
 
     return (
@@ -292,7 +298,9 @@ def render_card(t):
         f'data-nstc="{len(nstc_projects)}" '
         f'data-group="{esc(group)}">'
 
-        + f'<div class="flex items-start gap-3">'
+        + corner_checkbox_html
+
+        + f'<div class="flex items-start gap-3 pr-8">'
         f'<div class="w-12 h-12 rounded-full {av_cls} flex items-center justify-center '
         f'text-base font-bold shrink-0">{esc(ini)}</div>'
         f'<div class="flex-1 min-w-0">'
@@ -336,7 +344,7 @@ def render_card(t):
         + tpr_html
 
         + f'<div class="flex items-center justify-between gap-2 pt-1 border-t border-slate-50">'
-        f'<div class="flex items-center gap-2 min-w-0 flex-1">{checkbox_html}{email_html}</div>'
+        f'<div class="min-w-0 flex-1">{email_html}</div>'
         f'{profile_html}'
         f'</div>'
 
@@ -426,6 +434,38 @@ function sendMail() {
   var emails = Object.keys(selectedEmails);
   if (emails.length === 0) return;
   window.location.href = 'mailto:' + emails.join(',');
+}
+
+function exportXlsx() {
+  var keys = Object.keys(selectedEmails);
+  if (keys.length === 0) { alert('請先勾選教師'); return; }
+  var emailSet = {};
+  keys.forEach(function(e) { emailSet[e] = true; });
+  var rows = (window.ALL_TEACHERS || []).filter(function(t) { return emailSet[t.email]; });
+  if (rows.length === 0) { alert('找不到對應的教師資料'); return; }
+
+  var aoa = [[
+    '系所', '中文姓名', '英文姓名', '職稱', '組別', 'Email', '專長',
+    '著作篇數', '國科會計畫件數', '教學實踐計畫件數', '教師歷程', '當學期課表'
+  ]];
+  rows.forEach(function(t) {
+    aoa.push([
+      t.dept, t.name, t.nameEn, t.rank, t.group, t.email, t.expertise,
+      t.pubCount, t.nstcCount, t.tprCount, t.profileUrl, t.scheduleUrl
+    ]);
+  });
+
+  var ws = XLSX.utils.aoa_to_sheet(aoa);
+  ws['!cols'] = [
+    {wch:8}, {wch:10}, {wch:22}, {wch:10}, {wch:8}, {wch:28}, {wch:35},
+    {wch:9}, {wch:14}, {wch:16}, {wch:50}, {wch:50}
+  ];
+  var wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, '師資清單');
+
+  var d = new Date();
+  var dateStr = d.getFullYear() + ('0'+(d.getMonth()+1)).slice(-2) + ('0'+d.getDate()).slice(-2);
+  XLSX.writeFile(wb, '淡江外語師資_' + rows.length + '位_' + dateStr + '.xlsx');
 }
 
 function showSelList() {
@@ -584,6 +624,7 @@ def build_dept_page(cfg, data, dept_key):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>淡江大學{cfg['title']} — 專任師資查詢</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
 body {{ font-family: 'Noto Sans TC', sans-serif; }}
@@ -598,7 +639,10 @@ body {{ font-family: 'Noto Sans TC', sans-serif; }}
 </head>
 <body class="bg-slate-50 min-h-screen">
 
-<script>window.CURRENT_DEPT = "{cfg['title']}";</script>
+<script>
+window.CURRENT_DEPT = "{cfg['title']}";
+window.ALL_TEACHERS = {json.dumps(ALL_TEACHERS_SUMMARY, ensure_ascii=False)};
+</script>
 
 {nav_html}
 
@@ -676,7 +720,10 @@ body {{ font-family: 'Noto Sans TC', sans-serif; }}
       <button onclick="clearSel()" class="px-2.5 py-1.5 text-xs border border-slate-300 rounded-lg text-slate-600 hover:bg-slate-50 whitespace-nowrap">
         清除全部
       </button>
-      <button id="btnSendSelected" onclick="sendMail()" class="flex-1 sm:flex-none sm:ml-auto px-4 py-1.5 text-xs bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 whitespace-nowrap">
+      <button onclick="exportXlsx()" class="sm:ml-auto px-3 py-1.5 text-xs border border-emerald-300 text-emerald-700 bg-emerald-50 rounded-lg font-medium hover:bg-emerald-100 whitespace-nowrap">
+        📊 匯出 Excel
+      </button>
+      <button id="btnSendSelected" onclick="sendMail()" class="flex-1 sm:flex-none px-4 py-1.5 text-xs bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 whitespace-nowrap">
         ✉️ 寄給已勾選 <span id="selCount2" class="font-bold"></span>
       </button>
     </div>
@@ -756,6 +803,8 @@ def build_hub(depts_info):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>淡江大學外國語文學院 — 師資查詢總覽</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script>window.ALL_TEACHERS = {json.dumps(ALL_TEACHERS_SUMMARY, ensure_ascii=False)};</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
 body {{ font-family: 'Noto Sans TC', sans-serif; }}
@@ -784,9 +833,10 @@ body {{ font-family: 'Noto Sans TC', sans-serif; }}
       <div class="font-medium">📧 跨系所選取的教師：<span id="hubMailCount" class="font-bold text-blue-700 text-lg">0</span> 位</div>
       <div id="hubMailBreakdown" class="text-xs text-slate-500 mt-1"></div>
     </div>
-    <div class="ml-auto flex gap-2">
+    <div class="ml-auto flex flex-wrap gap-2">
       <button onclick="hubShowList()" class="px-3 py-1.5 text-xs border border-blue-300 text-blue-700 rounded-lg hover:bg-blue-100">檢視名單</button>
       <button onclick="hubClear()" class="px-3 py-1.5 text-xs border border-slate-300 text-slate-600 rounded-lg hover:bg-slate-50">清除</button>
+      <button onclick="hubExportXlsx()" class="px-3 py-1.5 text-xs border border-emerald-300 text-emerald-700 bg-emerald-50 rounded-lg font-medium hover:bg-emerald-100">📊 匯出 Excel</button>
       <button onclick="hubSend()" class="px-4 py-1.5 text-xs bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">✉️ 一次寄信給全部</button>
     </div>
   </div>
@@ -843,6 +893,35 @@ function hubSend() {{
   var keys = Object.keys(sel);
   if (keys.length === 0) return;
   window.location.href = 'mailto:' + keys.join(',');
+}}
+function hubExportXlsx() {{
+  var sel = hubLoad();
+  var keys = Object.keys(sel);
+  if (keys.length === 0) {{ alert('請先到各系所頁面勾選教師'); return; }}
+  var emailSet = {{}};
+  keys.forEach(function(e) {{ emailSet[e] = true; }});
+  var rows = (window.ALL_TEACHERS || []).filter(function(t) {{ return emailSet[t.email]; }});
+  if (rows.length === 0) {{ alert('找不到對應的教師資料'); return; }}
+  var aoa = [[
+    '系所', '中文姓名', '英文姓名', '職稱', '組別', 'Email', '專長',
+    '著作篇數', '國科會計畫件數', '教學實踐計畫件數', '教師歷程', '當學期課表'
+  ]];
+  rows.forEach(function(t) {{
+    aoa.push([
+      t.dept, t.name, t.nameEn, t.rank, t.group, t.email, t.expertise,
+      t.pubCount, t.nstcCount, t.tprCount, t.profileUrl, t.scheduleUrl
+    ]);
+  }});
+  var ws = XLSX.utils.aoa_to_sheet(aoa);
+  ws['!cols'] = [
+    {{wch:8}}, {{wch:10}}, {{wch:22}}, {{wch:10}}, {{wch:8}}, {{wch:28}}, {{wch:35}},
+    {{wch:9}}, {{wch:14}}, {{wch:16}}, {{wch:50}}, {{wch:50}}
+  ];
+  var wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, '師資清單');
+  var d = new Date();
+  var dateStr = d.getFullYear() + ('0'+(d.getMonth()+1)).slice(-2) + ('0'+d.getDate()).slice(-2);
+  XLSX.writeFile(wb, '淡江外語師資_' + rows.length + '位_' + dateStr + '.xlsx');
 }}
 function hubClear() {{
   if (!confirm('清除全部選取？')) return;
@@ -919,25 +998,48 @@ DEPTS = [
 
 
 def main():
-    hub_info = []
+    # First pass: load + prepare all dept data
+    loaded = []
     for cfg in DEPTS:
         if not os.path.exists(cfg["data_file"]):
             print(f"SKIP {cfg['key']}: {cfg['data_file']} not found")
             continue
-
         data = json.load(open(cfg["data_file"], encoding="utf-8"))
         dept_key = cfg["key"]
-
         for t in data:
             t["areas"] = infer_areas(t, dept_key)
             t["profileUrl"] = f"https://teacher.tku.edu.tw/StfTchrSmy.aspx?tid={t['uid']}"
             for p in t.get("publications", []):
                 if p.get("title"):  p["title"]  = " ".join(p["title"].split())
                 if p.get("source"): p["source"] = " ".join(p["source"].split())
+        data.sort(key=lambda t: RANK_ORDER.get(t.get("rank", ""), 9))
+        loaded.append((cfg, data))
 
-        data.sort(key=lambda t: RANK_ORDER.get(t.get("rank",""), 9))
-        build_dept_page(cfg, data, dept_key)
+    # Build flat cross-dept summary for Excel export (embedded on every page)
+    global ALL_TEACHERS_SUMMARY
+    ALL_TEACHERS_SUMMARY = []
+    for cfg, data in loaded:
+        for t in data:
+            uid = t.get("uid", "")
+            ALL_TEACHERS_SUMMARY.append({
+                "dept":        cfg["title"],
+                "name":        t.get("name", ""),
+                "nameEn":      t.get("nameEn", ""),
+                "rank":        t.get("rank", ""),
+                "group":       t.get("group", ""),
+                "email":       t.get("email", ""),
+                "expertise":   t.get("expertise", ""),
+                "pubCount":    len(t.get("publications", [])),
+                "nstcCount":   len(NSTC_BY_NAME.get(t.get("name", ""), [])),
+                "tprCount":    len(TPR_BY_NAME.get(t.get("name", ""), [])),
+                "profileUrl":  t.get("profileUrl", ""),
+                "scheduleUrl": f"https://teacher.tku.edu.tw/PsnSchoolTime.aspx?u={uid}" if uid else "",
+            })
 
+    # Second pass: build pages
+    hub_info = []
+    for cfg, data in loaded:
+        build_dept_page(cfg, data, cfg["key"])
         has_pub = sum(1 for t in data if t.get("publications"))
         hub_info.append({**cfg, "total": len(data), "has_pub": has_pub})
 
